@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/3 | Hexo</title>
+  <title>hexo+github搭建个人博客基础篇 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端从业者，爱好运动，爱好旅行。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+  <meta name="description" content="最近想用GitHub搭建个人博客，于是下功夫搜索了一番。网上有很多的教程，最终决定用hexo来搭建，因为简单、快速。本教程只是对整个搭建的记录，以及遇到的一些坑，高手可以直接跳过。
+说明：本教程针对window环境
+首先hexo是一款基于Node.js的静态博客框架, 官网传送门，所以你要了解一些node基础；其次是结合github自然要有一个github账号；最后hexo生成的代码上传需要用到g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+github搭建个人博客基础篇">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/hexo+github搭建个人博客基础篇/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前端从业者，爱好运动，爱好旅行。">
+<meta property="og:description" content="最近想用GitHub搭建个人博客，于是下功夫搜索了一番。网上有很多的教程，最终决定用hexo来搭建，因为简单、快速。本教程只是对整个搭建的记录，以及遇到的一些坑，高手可以直接跳过。
+说明：本教程针对window环境
+首先hexo是一款基于Node.js的静态博客框架, 官网传送门，所以你要了解一些node基础；其次是结合github自然要有一个github账号；最后hexo生成的代码上传需要用到g">
+<meta property="og:updated_time" content="2017-08-02T17:02:02.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="前端从业者，爱好运动，爱好旅行。">
+<meta name="twitter:title" content="hexo+github搭建个人博客基础篇">
+<meta name="twitter:description" content="最近想用GitHub搭建个人博客，于是下功夫搜索了一番。网上有很多的教程，最终决定用hexo来搭建，因为简单、快速。本教程只是对整个搭建的记录，以及遇到的一些坑，高手可以直接跳过。
+说明：本教程针对window环境
+首先hexo是一款基于Node.js的静态博客框架, 官网传送门，所以你要了解一些node基础；其次是结合github自然要有一个github账号；最后hexo生成的代码上传需要用到g">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -134,87 +141,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-hexo+github搭建个人博客基础篇" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/第一篇文章/" class="archive-article-date">
-  	<time datetime="2017-03-10T12:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/第一篇文章/">第一篇文章</a>
+    <h1 class="article-title" itemprop="name">
+      hexo+github搭建个人博客基础篇
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2017/08/02/hexo+github搭建个人博客基础篇/" class="archive-article-date">
+  	<time datetime="2017-08-02T12:50:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近想用GitHub搭建个人博客，于是下功夫搜索了一番。网上有很多的教程，最终决定用hexo来搭建，因为简单、快速。本教程只是对整个搭建的记录，以及遇到的一些坑，高手可以直接跳过。</p>
+<p><strong>说明：本教程针对window环境</strong></p>
+<p>首先hexo是一款基于Node.js的静态博客框架, <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">官网传送门</a>，所以你要了解一些node基础；其次是结合github自然要有一个github账号；最后hexo生成的代码上传需要用到git。</p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>1、安装node</p>
+<p>2、安装git</p>
+<p>3、申请github账号</p>
+<p>上面步骤都很简单，不具体说明了，不懂得赶紧去恶补。</p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>npm install hexo-cli -g</p>
+<p>进入放博客的文件夹，执行下面命令：</p>
+<p>hexo init blog      // 该命令会创建一个blog的文件夹，里面就是相关配置文件。</p>
+<p>cd blog              // 进入blog文件夹</p>
+<p>npm install       // 安装package.json里配置的模块</p>
+<p>hexo server     // 运行本地服务，在网页中查看效果。</p>
+<p>安装完后进入文件夹，可以看到如下文件夹及文件：</p>
+<p>node_modules   // npm 的安装模块文件</p>
+<p>scaffolds           // 布局文件</p>
+<p>source              // 资源文件，文章都放在该文件下的_posts</p>
+<p>themes             // 主题文件</p>
+<p>.gitignore         // git上传忽略文件配置</p>
+<p>_config.yml     // 核心配置文件</p>
+<p>package.json    // 描述npm安装包的文件</p>
+<p><strong>新建文章：</strong></p>
+<p>hexo new [layout] title</p>
+<p>layout 即scaffolds 中的文件</p>
+<p>hexo new ‘post’  // 新建文章，如果没有指定布局，默认新建的是post布局， 新文章在source 下的_posts下</p>
+<p>hexo new page ‘node’ // 在文件夹source下，的page下新建一个名为node的文章，如果没有page文件夹会自动新建一个。</p>
+<p>当然也可以手动添加文件和文件夹。</p>
+<h4 id="github上传配置"><a href="#github上传配置" class="headerlink" title="github上传配置"></a><strong>github上传配置</strong></h4><p>当在本地写好文章后就要传到github上，下面做相关配置。</p>
+<p>打开_config.yml文件，在最小面找到deploy字段，做如下配置：</p>
+<p>deploy:</p>
+<p>type: git</p>
+<p>repo: git@github.com:<strong>youname</strong>/<strong>youname</strong>.github.io.git（将<strong>youname</strong>换成你的GitHub名字）</p>
+<p>branch: master</p>
+<p>然后执行npm install hexo-deployer-git –save，<strong> </strong>安装相关模块，不然上传代码时会报错。</p>
+<p><strong>配置Github</strong></p>
+<p>创建一个与你用户名相同的仓库，如： youname.github.io，youname 换成你的github用户名</p>
+<p>在本地git中生成钥密，ssh-keygen -t rsa -C”youremail@example.com” 邮箱换成自己邮箱，然后一路回车，使用默认值即可。如果一切顺利的话，可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件。打开id_rsa.pub，复制里面的所有内容，然后登陆GitHub，打开个人的settings，选中SSH and GPG keys 选项，然后，点NEW SSH Key，填上任意Title，在文本框里粘贴id_rsa.pub文件的内容。</p>
+<p>关于git的用法以及github相关配置不懂得可以移步廖雪峰老师的站点学习<a href="[传送门](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)">[传送门](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)</a></p>
+<p><strong>生成文件上传github</strong></p>
+<p>hexo generate  //<strong> </strong>生成静态页面文件夹public</p>
+<p>hexo server      //<strong> </strong>开启本地服务查看效果（默认端口4000）</p>
+<p>hexo deploy     // 将.deploy目录部署到GitHub</p>
+<p>hexo clean       // 删除public文件夹</p>
+<p>每次上传文件前要先删除public文件夹，在生成静态页面，最后上传github，故执行如下命令：</p>
+<p>hexo clean</p>
+<p>hexo generate</p>
+<p>hexo deploy</p>
+<p>打开你的github，查看youname.github.io文件上传成功没，如果成功了在网址中打开youname.github.io，查看博客<strong>。</strong></p>
+<p><strong>注：在window环境下，执行hexo deploy命令一定要在git bash里运行，不能在cmd中运行，不然报错，当时为了这个问题坑了一把。</strong></p>
+<p><strong>小技巧：</strong></p>
+<p>每次重新上传都要执行者三个命令会很麻烦，可以偷个懒，打开package.json文件，在里面加入scripts字段：</p>
+<p>“scripts”: {</p>
+<p>​    “dev”: “hexo clean &amp;&amp; hexo g &amp;&amp; hexo d”</p>
+<p>}</p>
+<p>然后在git bash 里执行npm run dev即可一步执行这些操作。</p>
+<h4 id="域名配置"><a href="#域名配置" class="headerlink" title="域名配置"></a>域名配置</h4><p>到此博客基本搭建完成，如果你想要你的博客有个独特的域名，其实配置非常简单。</p>
+<p>1、购买域名</p>
+<p>2、配置解析</p>
+<p>以万网申请的域名为例，如图：</p>
+<p>3、在在public文件夹下新建名为CNAME的文件，</p>
+<p>在里面填写你的域名，执行hexo d上传代码，输入域名查看效果。</p>
+<p><strong>tips</strong>：每次执行hexo clean 后public文件都被删除了，CNAME文件也被删除了，这样每次都要重新创建这个文件会很麻烦。其实解决办法很简单，把配置文件CNAME放在source文件下，重新生成后，你发现在public文件中就有CNAME这个文件了。</p>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>到此博客就搭建完成了，但是对于hexo还有一块很重要的没有讲，那就是主题。hexo的强大体现在它丰富的主题。下期就讲一下我非常喜欢的一款简洁、漂亮的主题yilia。主题篇已完成[<a href="http://www.jianshu.com/p/370ca4ef808a" target="_blank" rel="external">传送门</a>]</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list">
 			 
         <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">vue</a>
+        	<a href="javascript:void(0)" class="article-tag-list-link color5">hexo 个人博客</a>
         </li>
       
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/02/hexo+github搭建个人博客基础篇/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/10/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-10T12:21:52.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/10/hello-world/">Hello World</a>
-    </h1>
+
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
 
 
           </div>
@@ -237,8 +331,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -310,7 +404,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color4">vue</a>
+                <a href="javascript:void(0)" class="color5">hexo 个人博客</a>
               </li>
             
             <div class="clearfix"></div>
