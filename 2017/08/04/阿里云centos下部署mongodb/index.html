@@ -6,51 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>&#39;阿里云centos下部署mongodb&#39; | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/assets/demo/coffee_pc_demo/pro-con.html">
+  <meta name="description" content="本教程是在阿里云cenots下部署mongodb的过程，整个过程遇到不少坑，浪费了很多时间。在网上查了很多教程，但是由于教程大多太久了，环境都不一样了，所以教程绝大部分走不通。为此走过不少坑，所以在此做一下记录。
+环境：系统：阿里云centos 7.3 64位
+mongodb版本： 3.4
+因为使用yum安装非常方便，所以下文使用yum安装，。
+修改yum包管理配置：
+1vi /etc/yum.r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'阿里云centos下部署mongodb'">
+<meta property="og:url" content="http://yoursite.com/2017/08/04/阿里云centos下部署mongodb/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
-<meta property="og:updated_time" content="2016-12-30T22:16:28.000Z">
+<meta property="og:description" content="本教程是在阿里云cenots下部署mongodb的过程，整个过程遇到不少坑，浪费了很多时间。在网上查了很多教程，但是由于教程大多太久了，环境都不一样了，所以教程绝大部分走不通。为此走过不少坑，所以在此做一下记录。
+环境：系统：阿里云centos 7.3 64位
+mongodb版本： 3.4
+因为使用yum安装非常方便，所以下文使用yum安装，。
+修改yum包管理配置：
+1vi /etc/yum.r">
+<meta property="og:updated_time" content="2017-08-03T17:42:11.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
+<meta name="twitter:title" content="'阿里云centos下部署mongodb'">
+<meta name="twitter:description" content="本教程是在阿里云cenots下部署mongodb的过程，整个过程遇到不少坑，浪费了很多时间。在网上查了很多教程，但是由于教程大多太久了，环境都不一样了，所以教程绝大部分走不通。为此走过不少坑，所以在此做一下记录。
+环境：系统：阿里云centos 7.3 64位
+mongodb版本： 3.4
+因为使用yum安装非常方便，所以下文使用yum安装，。
+修改yum包管理配置：
+1vi /etc/yum.r">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -168,68 +150,88 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-阿里云centos下部署mongodb" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;阿里云centos下部署mongodb&#39;
+    </h1>
+  
+
+        <a href="/2017/08/04/阿里云centos下部署mongodb/" class="archive-article-date">
+  	<time datetime="2017-08-03T17:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
+</a>
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html>
-<head>
-	<style type="text/css">
-		body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0 5px;
-			position:relative;
-			overflow: hidden;
-		}
-		.bufCover{
-			width: 100%;
-			height: 0;
-			background: #f0f;
-			border-radius: 5px;
-			position: absolute;
-		}
-		#buf{
-			height: 60px;
-		}
-		#des p{
-			padding: 4px 0;
-			margin: 0;
-			font-size: 14px;
-		}
-		#des .desPro{
-			color: #333;
-			background: #EEE;
-		}
-		#des .desCon{
-			color: #EEE;
-			background: #333;
-		}
-		#des .desSpe{
-			background: #BBB;
-		}
-	</style>
-	<script type="text/javascript" src="../jquery.js"></script>
-</head>
-<body>
-	<button id="produce">生产</button>
-	<button id="consume">消费</button>
-	<div id="buf">
-	</div>
-	<div id="des"><p></p></div>
-	<script type="text/javascript" src="pro-con.js"></script>
-</body>
-</html>
+        <p>本教程是在阿里云cenots下部署mongodb的过程，整个过程遇到不少坑，浪费了很多时间。<br>在网上查了很多教程，但是由于教程大多太久了，环境都不一样了，所以教程绝大部分走不通。为此走过不少坑，所以在此做一下记录。</p>
+<h4 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h4><p>系统：阿里云centos 7.3 64位</p>
+<p>mongodb版本： 3.4</p>
+<p>因为使用yum安装非常方便，所以下文使用yum安装，。</p>
+<p>修改yum包管理配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/yum.repos.d/mongodb-org-3.4.repo   // 会自动新建mongodb-org-3.4.repo文件</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>复制下面配置信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[mongodb-org-3.4]</div><div class="line">name=MongoDB Repository</div><div class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div></pre></td></tr></table></figure>
+<p>tips: 不懂linux去恶补下基础知识（vi 编辑器）</p>
+<p>安装mongodb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y mongodb-org   // 一路yes安装mongodb</div></pre></td></tr></table></figure>
+<p>启动mongodb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start mongod.service  // 启动mongodb</div></pre></td></tr></table></figure>
+<p>停止mongodb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop mongod.service  // 停止mongodb</div></pre></td></tr></table></figure>
+<p>重启mongodb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart mongod.service  // 重启mongodb</div></pre></td></tr></table></figure>
+<p>设置mongodb开机启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl enable mongod.service   // 设置开机启动</div></pre></td></tr></table></figure>
+<p>tips： centos 7将service命令 改为systemctl。</p>
+<p>mongodb安装成功，默认配置文件路径为：/etc/mongod.conf。执行cat /etc/mongod.conf,查看文件的配置。</p>
+<p>配置文件是yaml 语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">systemLog:</div><div class="line">  destination: file</div><div class="line">  logAppend: true</div><div class="line">  path: /var/log/mongodb/mongod.log  // 日志文件储存路径</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">storage:</div><div class="line">  dbPath: /var/lib/mongo    	// 数据储存路径</div><div class="line">  journal:</div><div class="line">    enabled: true</div></pre></td></tr></table></figure>
+<p>你也可以更改储存路径，更改路径时因先新建相关文件夹和文件，这里不做修改。</p>
+<p>本地连接mongodb：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mongo  				// 连接本地mongodb</div><div class="line">show dbs			// 查看所有数据库</div><div class="line">use mydb			// 切换mydb数据库，没有会自动添加</div><div class="line">show collections	// 查看集合</div></pre></td></tr></table></figure>
+<p>默认情况下，mongodb是没有安全验证的，都可以连接到该数据库。因为mongodb要求是部署在一个安全的环境中，而不需要验证。</p>
+<p>远程连接：</p>
+<p>在本地window中，打开cmd，执行mongo 192.168.31.54  (192.168.31.54为你的阿里云服务器外网地址)，发现连接不上，网上找了很长时间，终于解决了。</p>
+<p>1、在阿里云esc实例中设置安全组，把27017端口开放，mongodb 默认端口为27017，阿里云为了安全端口默认都是关闭的。</p>
+<p>2、修改mongodb配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/mongod.conf          // 编辑配置文件</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">net:</div><div class="line">  port: 27017</div><div class="line">  bindIp: 127.0.0.1  // mongodb 默认绑定的IP地址</div></pre></td></tr></table></figure>
+<p>默认情况下，阿里云只绑定了127.0.0.1本地地址，只能本地访问，需要在上面加上阿里云内网地址。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bindIp: 127.0.0.1,阿里云内网地址</div></pre></td></tr></table></figure>
+<p>重启mongodb服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart mongod.service</div></pre></td></tr></table></figure>
+<p>在本地cmd中再执行 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo 阿里云外网地址  // 发现现在可以连接上了。</div></pre></td></tr></table></figure>
+<p>到此本地和远程都可以连接上mongodb了，远程可以用可视化工具Robomongo连接，直接输入阿里云外网地址和端口号27017即可以远程连接成功。虽然远程可以连接上mongodb，但是只要知道阿里云外网地址，谁都可以通过远程连接到数据库，并且修改数据库了的数据，这样是非常不安全的。所以实际部署中是不建议bindIp里面加上阿里云内网地址的，只能通过本地访问。远程连接只是为了能方便用可视化工具Robomongo方便管理数据库。如果要想用Robomongo，又想数据库不能随便被别人连接上可以吗？当然可以，只需开启身份认证。</p>
+<p>默认情况下mongodb是关闭身份认证的，开启身份认证需如下步骤：</p>
+<p>1、修改mongodb配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vi /etc/mongod.conf				// 编辑mongod.conf文件</div><div class="line"></div><div class="line">security:  						// 去掉security前面#</div><div class="line">    authorization: enabled 		// 添加这句开启认证</div></pre></td></tr></table></figure>
+<p>在网上看了很多教程关于开启身份认证的，使用auth=true发现不行，后来才知道是教程太老了，配置字段都变了,坑的我找了很长时间。</p>
+<p>2、添加超级管理员</p>
+<p>默认Mongodb是没有管理员等用户信息的，开启身份认证是需要添加用户信息验证。首先添加的应该是admin数据库里的管理员账号，他用于其他数据库的用户添加、修改、删除等一些权限控制。</p>
+<p>执行如下操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">mongo					// 本地连接数据库</div><div class="line">use admin				// 切换到admin数据库，没有会自动添加</div><div class="line">db.createUser(			// 创建管理员用户</div><div class="line">  &#123;</div><div class="line">    user: &quot;admin&quot;,		// 账号</div><div class="line">    pwd: &quot;admin&quot;,		// 密码</div><div class="line">    roles: [ &#123; role: &quot;root&quot;, db: &quot;admin&quot; &#125; ] // 角色：超级管理员，数据库：admin</div><div class="line">  &#125;</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>创建成功后会输出Successfully added user。。。</p>
+<p>重启mongodb</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart mongod.service</div></pre></td></tr></table></figure>
+<p>执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mongo						// 连接数据库</div><div class="line">show dbs					// 显示所有数据库，这步会报错，说没有通过验证。</div><div class="line">use admin					// 切换到admin数据库</div><div class="line">db.auth(&apos;admin&apos;,&apos;admin&apos;) 	// 用上面设置的账号密码登录</div><div class="line">如果返回 &apos;1&apos;表示验证成功， 如果是 &apos;0&apos; 表示验证失败</div></pre></td></tr></table></figure>
+<p>身份验证开启了，在window端cmd中执行下面命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mongo 阿里云外网地址			// 发现连接失败，因为没有通过验证。</div><div class="line">如果执行下面这句</div><div class="line">mongo 阿里云外网地址 -u &quot;admin&quot; -p &quot;admin&quot; --authenticationDatabase admin	</div><div class="line">// 发现连接成功</div></pre></td></tr></table></figure>
+<p>Robomongo身份认证连接：</p>
+<p>切换到Authorization选项，选中Perform authorization,填上Database, user name,  password,就可以连接成功了。</p>
+<p>mongodb不像mysql，验证的用户对所有数据库都有读写的能力，不同的库需要配置相关的用户信息才能对该库进行读写。比如有个myblog的数据库，需要对其有读写的能力，新建一个具有读写能力的用户。</p>
+<p>命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">mongo			// 连接数据库</div><div class="line">use admin		// 切换到admin数据库</div><div class="line">db.auth(&apos;admin&apos;,&apos;admin&apos;)		// auth验证登录</div><div class="line">use myblog						// 切换到myblog数据库</div><div class="line">db.createUser(			// 创建普通用户</div><div class="line">  &#123;</div><div class="line">    user: &quot;keen&quot;,		// 账号</div><div class="line">    pwd: &quot;123&quot;,		// 密码</div><div class="line">    roles: [ &#123; role: &quot;readWrite&quot;, db: &quot;myblog&quot; &#125; ] // 角色：读写，数据库：myblog</div><div class="line">  &#125;</div><div class="line">)</div><div class="line">db.auth(&apos;keen&apos;, &apos;123&apos;)			// 使用新建用户keen验证登录</div></pre></td></tr></table></figure>
+<p>到此整个mongodb配置结束了,关于mongodb的身份认证，以及权限控制，可以看看这篇文章，写的很详细。<a href="[传送门](http://shift-alt-ctrl.iteye.com/blog/2262709)">[传送门](http://shift-alt-ctrl.iteye.com/blog/2262709)</a></p>
+
       
 
       
@@ -287,7 +289,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/assets/demo/coffee_pc_demo/pro-con.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/04/阿里云centos下部署mongodb/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,6 +301,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/08/04/hexo-github搭建个人博客主题篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          &#39;hexo+github搭建个人博客主题篇&#39;
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/04/阿里云centos下部署ftp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo+github搭建个人博客基础篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -327,7 +348,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

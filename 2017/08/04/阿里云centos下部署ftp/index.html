@@ -6,51 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>hexo+github搭建个人博客基础篇 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/assets/demo/coffee_pc_demo/pro-con.html">
+  <meta name="description" content="环境：1、Centos 7.3
+2、阿里云专有网络
+安装123yum install -y vsftpd   // 安装systemctl start vsftpd.service   // 启动vsftpd服务
+ftp权限配置：vsftpd 的配置目录为 /etc/vsftpd，包含下列的配置文件：
+1、vsftpd.conf      // 主配置文件
+2、ftpusers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo+github搭建个人博客基础篇">
+<meta property="og:url" content="http://yoursite.com/2017/08/04/阿里云centos下部署ftp/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
-<meta property="og:updated_time" content="2016-12-30T22:16:28.000Z">
+<meta property="og:description" content="环境：1、Centos 7.3
+2、阿里云专有网络
+安装123yum install -y vsftpd   // 安装systemctl start vsftpd.service   // 启动vsftpd服务
+ftp权限配置：vsftpd 的配置目录为 /etc/vsftpd，包含下列的配置文件：
+1、vsftpd.conf      // 主配置文件
+2、ftpusers">
+<meta property="og:updated_time" content="2017-08-03T17:41:46.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0">
+<meta name="twitter:title" content="hexo+github搭建个人博客基础篇">
+<meta name="twitter:description" content="环境：1、Centos 7.3
+2、阿里云专有网络
+安装123yum install -y vsftpd   // 安装systemctl start vsftpd.service   // 启动vsftpd服务
+ftp权限配置：vsftpd 的配置目录为 /etc/vsftpd，包含下列的配置文件：
+1、vsftpd.conf      // 主配置文件
+2、ftpusers">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -168,68 +150,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-阿里云centos下部署ftp" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo+github搭建个人博客基础篇
+    </h1>
+  
+
+        <a href="/2017/08/04/阿里云centos下部署ftp/" class="archive-article-date">
+  	<time datetime="2017-08-03T17:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
+</a>
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html>
-<head>
-	<style type="text/css">
-		body{
-			background: #fff;
-		}
-		.bufBox{
-			float: left;
-			width: 50px;
-			height: 50px;
-			background: #ddd;
-			border-radius: 5px;
-			text-align: center;
-			line-height: 50px;
-			margin: 0 5px;
-			position:relative;
-			overflow: hidden;
-		}
-		.bufCover{
-			width: 100%;
-			height: 0;
-			background: #f0f;
-			border-radius: 5px;
-			position: absolute;
-		}
-		#buf{
-			height: 60px;
-		}
-		#des p{
-			padding: 4px 0;
-			margin: 0;
-			font-size: 14px;
-		}
-		#des .desPro{
-			color: #333;
-			background: #EEE;
-		}
-		#des .desCon{
-			color: #EEE;
-			background: #333;
-		}
-		#des .desSpe{
-			background: #BBB;
-		}
-	</style>
-	<script type="text/javascript" src="../jquery.js"></script>
-</head>
-<body>
-	<button id="produce">生产</button>
-	<button id="consume">消费</button>
-	<div id="buf">
-	</div>
-	<div id="des"><p></p></div>
-	<script type="text/javascript" src="pro-con.js"></script>
-</body>
-</html>
+        <h4 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h4><p>1、Centos 7.3</p>
+<p>2、阿里云专有网络</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install -y vsftpd   // 安装</div><div class="line"></div><div class="line">systemctl start vsftpd.service   // 启动vsftpd服务</div></pre></td></tr></table></figure>
+<h3 id="ftp权限配置："><a href="#ftp权限配置：" class="headerlink" title="ftp权限配置："></a>ftp权限配置：</h3><p>vsftpd 的配置目录为 /etc/vsftpd，包含下列的配置文件：</p>
+<p>1、vsftpd.conf      // 主配置文件</p>
+<p>2、ftpusers          // 禁止访问 FTP 服务器的用户列表</p>
+<p>3、user_list          // 用户访问控制</p>
+<a id="more"></a>
+<p>这里只做简单配置，禁止切换目录。编辑 /etc/vsftpd/vsftpd.conf，找到下面两处配置并修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">anonymous_enable=NO		(改为NO)			// 禁用匿名用户 </div><div class="line"></div><div class="line">chroot_local_user=YES	(改为YES)			// 禁止切换根目录</div></pre></td></tr></table></figure>
+<h4 id="切换目录权限配置："><a href="#切换目录权限配置：" class="headerlink" title="切换目录权限配置："></a>切换目录权限配置：</h4><p>chroot_list_enable=YES/NO（NO）</p>
+<p>设置是否启用chroot_list_file配置项指定的用户列表文件。默认值为NO。</p>
+<p>chroot_list_file=/etc/vsftpd/chroot_list</p>
+<p>用于指定用户列表文件，该文件用于控制哪些用户可以切换到用户家目录的上级目录。</p>
+<p>chroot_local_user=YES/NO（NO）</p>
+<p>用于指定用户列表文件中的用户是否允许切换到上级目录。默认值为NO。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">通过搭配能实现以下几种效果：</div><div class="line"></div><div class="line"></div><div class="line">1、当chroot_list_enable=YES，chroot_local_user=YES时，在/etc/vsftpd.chroot_list文件中列出的用户，可以切换到其他目录；未在文件中列出的用户，不能切换到其他目录。</div><div class="line"></div><div class="line"></div><div class="line">2、当chroot_list_enable=YES，chroot_local_user=NO时，在/etc/vsftpd.chroot_list文件中列出的用户，不能切换到其他目录；未在文件中列出的用户，可以切换到其他目录。</div><div class="line"></div><div class="line"></div><div class="line">3、当chroot_list_enable=NO，chroot_local_user=YES时，所有的用户均不能切换到其他目录。</div><div class="line"></div><div class="line"></div><div class="line">4、当chroot_list_enable=NO，chroot_local_user=NO时，所有的用户均可以切换到其他目录。</div></pre></td></tr></table></figure>
+<p>故上面配置属于第三种情况，所有用户不能切换到其他目录。</p>
+<p>如果使用情况1或者情况2时，要在/etc/vsftpd下新建chroot_list文件，配置相关用户。</p>
+<p>重启服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart vsftpd.service</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">创建一个用户 ftpuser</div><div class="line">useradd ftpuser</div><div class="line"></div><div class="line">限制用户 ftpuser只能通过 FTP 访问服务器，而不能直接登录服务器：</div><div class="line">usermod -s /sbin/nologin ftpuser</div></pre></td></tr></table></figure>
+<h4 id="上面两步可以合二为一："><a href="#上面两步可以合二为一：" class="headerlink" title="上面两步可以合二为一："></a>上面两步可以合二为一：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd ftpuser -s /sbin/nologin</div></pre></td></tr></table></figure>
+<p>为用户 ftpuser 设置密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">方法一：</div><div class="line">echo &quot;keenjaan&quot; | passwd ftpuser --stdin</div><div class="line"></div><div class="line">方法二：</div><div class="line">passwd ftpuser</div><div class="line">输入两遍密码即可</div></pre></td></tr></table></figure>
+<h3 id="2-5-为用户分配主目录"><a href="#2-5-为用户分配主目录" class="headerlink" title="2.5 为用户分配主目录"></a>2.5 为用户分配主目录</h3><p>在/var中创建相关的目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p /var/ftp/pub</div></pre></td></tr></table></figure>
+<p>配置主目录即目录权限配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/var/ftp 			// 为主目录, 该目录只能读，不能写和执行</div><div class="line"></div><div class="line">/var/ftp/pub 		// 文件具有读、写、执行权限</div></pre></td></tr></table></figure>
+<p>设置访问权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">chmod a-w /var/ftp &amp;&amp; chmod 777 -R /var/ftp/pub</div><div class="line"></div><div class="line">对ftp文件：有读取权限，没有写入权限。</div><div class="line"></div><div class="line">对pub文件及其所有子文件：最高权限，读写，执行。</div></pre></td></tr></table></figure>
+<p>关于chmod命令：参考这个连接<a href="http://www.linuxyw.com/linux/wenjianguanli/20130429/148.html" target="_blank" rel="external">传送门</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">chmod [-cfvR] [--help] [--version] mode file...</div><div class="line"></div><div class="line">参数 :</div><div class="line">　　mode : 权限设定字串，格式如下 : [ugoa...][[+-=][rwxX]...][,...]，其中</div><div class="line">u 表示该文件的拥有者[user]，</div><div class="line">g 表示与该文件的拥有者属于组(group)，</div><div class="line">o 表示其他用户[other]，</div><div class="line">a 表示这三者皆是[all]。（常用）</div><div class="line"></div><div class="line">+ 表示增加权限、（常用）</div><div class="line">- 表示取消权限、（常用）</div><div class="line">= 表示唯一设定权限。</div><div class="line"></div><div class="line">r 表示有可读取的权限，</div><div class="line">w 表示有可写入的权限，</div><div class="line">x 表示有可执行的权限，</div><div class="line">X 表示只有当该文件是个子目录或者该文件已经被设定过为可执行。</div><div class="line"></div><div class="line">-c : 若该文件权限确实已经更改，才显示其更改动作</div><div class="line">-f : 若该文件权限无法被更改也不要显示错误讯息</div><div class="line">-v : 显示权限变更的详细资料</div><div class="line">-R : 对目前目录下的所有文件与子目录进行相同的权限变更  （常用）</div><div class="line">--help : 显示帮助</div><div class="line">--version : 显示版本</div><div class="line"></div><div class="line">r=4，</div><div class="line">w=2，</div><div class="line">x=1</div><div class="line">rwx属性则4+2+1=7；</div><div class="line">rw-属性则4+2=6；</div><div class="line">r-x属性则4+1=5。</div></pre></td></tr></table></figure></p>
+<p>设置为用户的主目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">usermod -d /var/ftp ftpuser</div></pre></td></tr></table></figure>
+<p>在阿里云安全组中开放21端口号。</p>
+<p>使用<a href="https://filezilla-project.org/" target="_blank" rel="external">FileZilla</a>登录到ftp报错，553，最终设置FileZilla传输设置里传输模式为主动，就能正常传输了。</p>
+<p>到此ftp配置完成。这里有篇关于ftp配置文章很详细，<a href="http://blog.csdn.net/u012225745/article/details/49742031" target="_blank" rel="external">传送门</a></p>
+
       
 
       
@@ -237,6 +213,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list">
+			 
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color5">阿里云 centos ftp</a>
+        </li>
+      
+		</ul>
+	</div>
+
       
 
       
@@ -287,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/assets/demo/coffee_pc_demo/pro-con.html" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/04/阿里云centos下部署ftp/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,6 +286,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2017/08/04/阿里云centos下部署mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          &#39;阿里云centos下部署mongodb&#39;
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/02/hexo+github搭建个人博客基础篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo+github搭建个人博客基础篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
@@ -327,7 +333,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
