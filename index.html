@@ -136,6 +136,160 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-阿里云centos部署git服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/05/阿里云centos部署git服务/">阿里云centos部署git服务</a>
+    </h1>
+  
+
+        <a href="/2017/08/05/阿里云centos部署git服务/" class="archive-article-date">
+  	<time datetime="2017-08-04T16:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y git</div></pre></td></tr></table></figure>
+<p>我选择/data/git/demo.git作为仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir -p /data/git		// 新建文件夹</div><div class="line"></div><div class="line">cd /data/git			// 进入/data/git文件夹</div><div class="line"></div><div class="line">git init --bare demo.git	// 创建一个裸仓库</div></pre></td></tr></table></figure>
+<p>关于–bare参数及其作用详情请看这篇文章<a href="http://blog.csdn.net/ljchlx/article/details/21805231">传送门</a></p>
+<p>创建git用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adduser git</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/08/05/阿里云centos部署git服务/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list">
+			 
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">阿里云</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color2">centos</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">git</a>
+        </li>
+      
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/05/阿里云centos部署git服务/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-阿里云cento下部署node和nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/04/阿里云cento下部署node和nginx/">阿里云cento下部署node和nginx</a>
+    </h1>
+  
+
+        <a href="/2017/08/04/阿里云cento下部署node和nginx/" class="archive-article-date">
+  	<time datetime="2017-08-04T14:32:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###　node 安装</p>
+<p>参考阿里云node安装教程,使用wget下载免安装的、已编译好的二进制文件，解压后，bin文件夹中存在node 和 npm。</p>
+<p>1、wget下载node.js安装包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget https://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-x64.tar.xz		</div><div class="line">// 安装node6.9.5版本，如果其他版本可以自己换</div></pre></td></tr></table></figure>
+<p>2、 解压文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar xvf node-v6.9.5-linux-x64.tar.xz</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/08/04/阿里云cento下部署node和nginx/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list">
+			 
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color4">阿里云</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color2">centos</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color5">node</a>
+        </li>
+       
+        <li class="article-tag-list-item">
+        	<a href="javascript:void(0)" class="article-tag-list-link color1">nginx</a>
+        </li>
+      
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/04/阿里云cento下部署node和nginx/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-hexo-github搭建个人博客主题篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -221,11 +375,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本教程是在阿里云cenots下部署mongodb的过程，整个过程遇到不少坑，浪费了很多时间。<br>在网上查了很多教程，但是由于教程大多太久了，环境都不一样了，所以教程绝大部分走不通。为此走过不少坑，所以在此做一下记录。</p>
-<h4 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h4><p>系统：阿里云centos 7.3 64位</p>
-<p>mongodb版本： 3.4</p>
-<p>因为使用yum安装非常方便，所以下文使用yum安装，。</p>
-<p>修改yum包管理配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/yum.repos.d/mongodb-org-3.4.repo   // 会自动新建mongodb-org-3.4.repo文件</div></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2017/08/04/阿里云centos下部署mongodb/#more">more >></a>
         
@@ -515,18 +664,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color4">阿里云</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color2">centos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color3">mongodb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="color5">hexo</a>
               </li>
              
@@ -535,7 +672,31 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color4">阿里云</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="color4">ftp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color3">mongodb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color4">git</a>
               </li>
             
             <div class="clearfix"></div>

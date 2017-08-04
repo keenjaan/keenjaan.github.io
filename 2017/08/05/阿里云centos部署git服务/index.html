@@ -6,17 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: centos | Hexo</title>
+  <title>阿里云centos部署git服务 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端从业者，爱好运动，爱好旅行。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/centos/index.html">
+  <meta name="description" content="安装git1yum install -y git
+我选择/data/git/demo.git作为仓库
+12345mkdir -p /data/git		// 新建文件夹cd /data/git			// 进入/data/git文件夹git init --bare demo.git	// 创建一个裸仓库
+关于–bare参数及其作用详情请看这篇文章传送门
+创建git用户
+1adduser git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云centos部署git服务">
+<meta property="og:url" content="http://yoursite.com/2017/08/05/阿里云centos部署git服务/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前端从业者，爱好运动，爱好旅行。">
+<meta property="og:description" content="安装git1yum install -y git
+我选择/data/git/demo.git作为仓库
+12345mkdir -p /data/git		// 新建文件夹cd /data/git			// 进入/data/git文件夹git init --bare demo.git	// 创建一个裸仓库
+关于–bare参数及其作用详情请看这篇文章传送门
+创建git用户
+1adduser git">
+<meta property="og:updated_time" content="2017-08-04T16:37:04.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="前端从业者，爱好运动，爱好旅行。">
+<meta name="twitter:title" content="阿里云centos部署git服务">
+<meta name="twitter:description" content="安装git1yum install -y git
+我选择/data/git/demo.git作为仓库
+12345mkdir -p /data/git		// 新建文件夹cd /data/git			// 进入/data/git文件夹git init --bare demo.git	// 创建一个裸仓库
+关于–bare参数及其作用详情请看这篇文章传送门
+创建git用户
+1adduser git">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -134,36 +150,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-阿里云centos部署git服务" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/05/阿里云centos部署git服务/" class="archive-article-date">
-  	<time datetime="2017-08-04T16:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/阿里云centos部署git服务/">阿里云centos部署git服务</a>
+    <h1 class="article-title" itemprop="name">
+      阿里云centos部署git服务
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2017/08/05/阿里云centos部署git服务/" class="archive-article-date">
+  	<time datetime="2017-08-04T16:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y git</div></pre></td></tr></table></figure>
+<p>我选择/data/git/demo.git作为仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir -p /data/git		// 新建文件夹</div><div class="line"></div><div class="line">cd /data/git			// 进入/data/git文件夹</div><div class="line"></div><div class="line">git init --bare demo.git	// 创建一个裸仓库</div></pre></td></tr></table></figure>
+<p>关于–bare参数及其作用详情请看这篇文章<a href="http://blog.csdn.net/ljchlx/article/details/21805231" target="_blank" rel="external">传送门</a></p>
+<p>创建git用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">adduser git</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>将learngit.git拥有者给到git用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown git:git demo.git</div></pre></td></tr></table></figure>
+<p>在本地拉取demo仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@阿里云外网地址:/data/git/demo.git</div></pre></td></tr></table></figure>
+<p>第一，当你第一次使用Git的clone或者push命令连接GitHub时，会得到一个警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">The authenticity of host &apos;xx.xx.xx.xx&apos; can&apos;t be established.</div><div class="line">RSA key fingerprint is xx.xx.xx.xx.xx.</div><div class="line">Are you sure you want to continue connecting (yes/no)?</div></pre></td></tr></table></figure>
+<p>输入yes，后又要输入密码，输入密码，仓库成功拉取到了本地。但是一般都是用代替密码来验证的。</p>
+<h4 id="生成SSH-Key密钥"><a href="#生成SSH-Key密钥" class="headerlink" title="生成SSH Key密钥"></a>生成SSH Key密钥</h4><p>在用户主目录下，看看有没有.ssh目录，.ssh里有没有id_rsa和id_rsa.pub两个文件。有代表你以前生成过密钥，不用重新生成。(我的之前生成的公钥一直要密码登录，但是重新生成后就没有问题了)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;email@example.com&quot;		// 生成密钥</div></pre></td></tr></table></figure>
+<p><strong>tips</strong>: 关于git的详细教程，不懂的可以移步廖雪峰老师的网站学习<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">传送门</a></p>
+<p>服务器配置git公钥验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vi /etc/ssh/sshd_config		// 编辑配置文件</div><div class="line"></div><div class="line">RSAAuthentication yes 		// 去掉注释 #    </div><div class="line">PubkeyAuthentication yes    // 去掉注释 #</div><div class="line">AuthorizedKeysFile  .ssh/authorized_keys	// .ssh/authorized_keys 为公钥配置文件</div></pre></td></tr></table></figure>
+<p>.ssh/authorized_keys 在 /home/git文件下，故要新建文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir -p /home/git/.ssh			// 新建文件夹</div><div class="line">touch authorized_keys			// 新建文件</div></pre></td></tr></table></figure>
+<p>复制本地git生成的id_rsa.pub文件中内容，粘贴到authorized_keys中，保存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@阿里云外网地址:/data/git/demo.git</div></pre></td></tr></table></figure>
+<p>发现不要密码也可以拉取仓库了。</p>
+<h5 id="禁用git用户的shell登陆"><a href="#禁用git用户的shell登陆" class="headerlink" title="禁用git用户的shell登陆"></a>禁用git用户的shell登陆</h5><p>处于安全考虑，git用户不能通过shell登录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git:x:1002:1002:,,,:/home/git:/bin/bash 	// 将这句改成下面这句</div><div class="line"></div><div class="line">git:x:1002:1002:,,,:/home/git:/usr/bin/git-shell</div></pre></td></tr></table></figure>
+<p>到此，git的配置就完成了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list">
@@ -183,161 +222,84 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/04/阿里云cento下部署node和nginx/" class="archive-article-date">
-  	<time datetime="2017-08-04T14:32:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/阿里云cento下部署node和nginx/">阿里云cento下部署node和nginx</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list">
-			 
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">阿里云</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color2">centos</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color5">node</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color1">nginx</a>
-        </li>
       
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/04/阿里云centos下部署mongodb/" class="archive-article-date">
-  	<time datetime="2017-08-03T17:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/阿里云centos下部署mongodb/">阿里云centos下部署mongodb</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list">
-			 
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">阿里云</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color2">centos</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color3">mongodb</a>
-        </li>
       
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/04/阿里云centos下部署ftp/" class="archive-article-date">
-  	<time datetime="2017-08-03T17:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/04/阿里云centos下部署ftp/">阿里云centos下部署ftp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list">
-			 
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">阿里云</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color2">centos</a>
-        </li>
-       
-        <li class="article-tag-list-item">
-        	<a href="javascript:void(0)" class="article-tag-list-link color4">ftp</a>
-        </li>
       
-		</ul>
-	</div>
-
-          
-
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/05/阿里云centos部署git服务/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/04/阿里云cento下部署node和nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">阿里云cento下部署node和nginx</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
 
 
           </div>
@@ -360,9 +322,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
