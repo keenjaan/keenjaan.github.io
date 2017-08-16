@@ -20,7 +20,7 @@
 
 一般对于一个软件有很多不同资源，不同的资源下载的速度有很大差异，就像在迅雷上下载资源一样，有的资源下载速度可以达到10M/s，而有的则只有10K/s，并且到后面根本下载不了。
 软件也一样，有很多不同的资源，下载的速度自然有差异。npm相当于一个软件商店，只是上面的软件都是免费。上面的软件当然有不同的资源，下载速度当然有很大差异。npm默认下载地址是国外">
-<meta property="og:updated_time" content="2017-08-16T15:04:44.183Z">
+<meta property="og:updated_time" content="2017-08-16T15:06:54.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="提升npm下载速度之npm换源">
 <meta name="twitter:description" content="说到换源先说下什么是换源，为什么要换源。
@@ -179,14 +179,14 @@
 <h4 id="cnpmjs镜像"><a href="#cnpmjs镜像" class="headerlink" title="cnpmjs镜像"></a>cnpmjs镜像</h4><p>搜索地址：<a href="http://cnpmjs.org/" target="_blank" rel="external">http://cnpmjs.org/</a></p>
 <p>我们只需要将资源地址改为国内镜像就可以。如下：</p>
 <p>1、通过 config 配置指向国内镜像源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config set registry http://registry.cnpmjs.org		// 配置源的指向</div><div class="line">npm install express			// 安装express</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config <span class="built_in">set</span> registry http://registry.cnpmjs.org		// 配置源的指向</div><div class="line">npm install express			// 安装express</div></pre></td></tr></table></figure>
 <p>2、通过 npm 命令指定下载源</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm --registry http://registry.cnpmjs.org install express	// 配置源并安装express模块</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm --registry http://registry.cnpmjs.org install express	// 配置源并安装express模块</div></pre></td></tr></table></figure>
 <p>3、在配置文件 .npmrc 文件写入源地址</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">打开电脑的个人用户目录下的.npmrc文件，没有就新建。</div><div class="line">registry=http://registry.cnpmjs.org		// 写入这段</div></pre></td></tr></table></figure>
 <p>前两种方法是临时的改变源，第三种是永久改变源。</p>
 <p>对于换源推荐一个npm模块nrm。nrm是一个npm源管理工具，其切换源非常方便。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm  install   -g   nrm		<span class="comment">// 全局安装nrm模块</span></div><div class="line"></div><div class="line">nrm ls						<span class="comment">// 显示所有可用的源</span></div><div class="line"></div><div class="line">nrm use taobao				<span class="comment">// 切换到淘宝源：</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm  install   -g   nrm		// 全局安装nrm模块</div><div class="line"></div><div class="line">nrm ls						// 显示所有可用的源</div><div class="line"></div><div class="line">nrm use taobao				// 切换到淘宝源：</div></pre></td></tr></table></figure>
 <p><strong>特殊：</strong></p>
 <p>有些模块即使换了源还是安装非常慢以至于安装失败，比如：node-sass。</p>
 <p>在安装node-sass过程中，是要在 GitHub 上下载编译好的 <code>node-sass</code> 二进制包，本来github访问速度就慢，request访问速度更慢。</p>
@@ -417,15 +417,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color4">ftp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="color3">mongodb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="color4">git</a>
+                <a href="javascript:void(0)" class="color4">ftp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -434,6 +430,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="color1">nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="color4">git</a>
               </li>
             
             <div class="clearfix"></div>
